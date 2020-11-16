@@ -1,7 +1,8 @@
 <?php
-$pageName = $_GET['page_type'];
-include_once 'data.php';
-include_once './cms_template/layout.php';
+require_once './db.php';
+require_once './template/layout.php';
+
+
 
 
 
