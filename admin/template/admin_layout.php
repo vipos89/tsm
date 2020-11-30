@@ -34,7 +34,8 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li class="active"><a href="index.html"><i class="fa fa-bullseye"></i> Dashboard</a></li>
-                <li><a href="portfolio.html"><i class="fa fa-tasks"></i> Portfolio</a></li>
+                <li><a href="/admin/?action=list_page"><i class="fa fa-tasks"></i> Статьи</a></li>
+                <li><a href="/admin/?action=category_page"><i class="fa fa-tasks"></i> Категории</a></li>
                 <li><a href="blog.html"><i class="fa fa-globe"></i> Blog</a></li>
                 <li><a href="forms.html"><i class="fa fa-list-ol"></i> Forms</a></li>
                 <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>

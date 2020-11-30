@@ -4,6 +4,10 @@ if (isset($_GET['id']) && !empty($_GET['id']) && $_GET['action'] == 'edit_page')
     $res = mysqli_query($connection, $sql);
     $page = mysqli_fetch_assoc($res);
 }
+$sql = "Select * from category";
+$res = mysqli_query($connection, $sql);
+$categories = mysqli_fetch_all($res, MYSQLI_ASSOC);
+var_dump($categories);
 
 $url = isset($page['id']) ? '/admin/?action=update_page&id=' . $page['id'] : '/admin/?action=save_page';
 
@@ -32,9 +36,17 @@ $url = isset($page['id']) ? '/admin/?action=update_page&id=' . $page['id'] : '/a
             </div>
 
             <div class="form-group">
-                <label>Text Input</label>
-                <input class="form-control" name="category" value="<?= $page['category'] ?? '' ?>">
-                <p class="help-block">Example block-level help text here.</p>
+                <label>Категория </label>
+                <select name="category" class="form-control">
+                    <?php foreach ($categories as $category):
+                        $selected = '';
+                        if (isset($page['category']) && $page['category'] == $category['id']) {
+                            $selected = 'selected';
+                        }
+                        ?>
+                        <option value="<?= $category['id'] ?>" <?=$selected?>><?= $category['category_name'] ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
 
             <div class="form-group">
