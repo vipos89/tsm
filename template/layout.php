@@ -20,6 +20,7 @@
 
   <!-- Custom styles for this template -->
   <link href="/assets/css/clean-blog.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -39,7 +40,7 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="?page_type=catalog">Каталог</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="post.html">Sample Post</a>

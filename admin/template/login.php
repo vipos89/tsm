@@ -1,13 +1,12 @@
 <?php
-var_dump($_POST);
+
 if (!empty($_POST)){
     $sql = "SELECT * FROM users where username = '{$_POST['name']}'";
     $res = mysqli_query($connection, $sql);
     $user = mysqli_fetch_assoc($res);
-    var_dump($user);
+
     if($user){
-        var_dump($user['password']);
-        var_dump(md5($_POST['password']));
+
         if($user['password'] === md5($_POST['password'])){
             $_SESSION['user'] = $user;
             header("Location: http://homestead.test/admin/");
