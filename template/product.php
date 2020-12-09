@@ -44,7 +44,16 @@ $product = mysqli_fetch_assoc($res);
             $.ajax({
                 url: '/?action=add_to_cart',
                 method: 'post',
-                data: {id: id}
+                data: {id: id},
+                success: function(data){
+                   // заменить содержимое контейнера товаров
+                },
+                error: function (data) {
+
+                },
+                done: function (data) {
+                    alert(34534534);
+                }
             });
 
         })

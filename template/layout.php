@@ -56,6 +56,9 @@
 
   if(isset($_GET['page_type'])){
      $name = $_GET['page_type']; // article
+      if (!file_exists( __DIR__.'/'.$name.'.php')){
+          $name = '404';
+      }
   }else {
       $name = 'main';
   }

@@ -5,4 +5,6 @@ if (isset($_POST['id'])) {
     if (!in_array($_POST['id'], $cart)) {
         $_SESSION['cart'][] = $_POST['id'];
     }
+
 }
+echo json_encode( $_SESSION['cart']);
